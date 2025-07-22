@@ -1,0 +1,212 @@
+/* Base Styles */
+.prescription-container {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .prescription-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .prescription-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* Button Styles */
+  .btn-edit, .btn-save, .btn-cancel, .btn-print, .btn-add, .btn-remove {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-edit {
+    background-color: #3498db;
+    color: #131415;
+  }
+  
+  .btn-save {
+    background-color: #2ecc71;
+    color: #131415;
+  }
+  
+  .btn-cancel {
+    background-color: #e74c3c;
+    color: #131415;
+  }
+  
+  .btn-print {
+    background-color: #95a5a6;
+    color: #131415;
+  }
+  
+  .btn-add {
+    background-color: #27ae60;
+    color: #131415;
+    margin-top: 10px;
+  }
+  
+  .btn-remove {
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .btn-edit:hover, .btn-save:hover, .btn-cancel:hover, 
+  .btn-print:hover, .btn-add:hover, .btn-remove:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  /* Prescription Card */
+  .prescription-card {
+    background-color: #131415;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .prescription-header-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .clinic-info h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+  }
+  
+  .clinic-info p {
+    color: #7f8c8d;
+    margin: 3px 0;
+  }
+  
+  .prescription-meta p {
+    text-align: right;
+    color: #7f8c8d;
+    margin: 3px 0;
+  }
+  
+  /* Patient & Doctor Info */
+  .patient-doctor-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .patient-info, .doctor-info {
+    width: 48%;
+  }
+  
+  .patient-info h3, .doctor-info h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .patient-info p, .doctor-info p {
+    color: #34495e;
+  }
+  
+  /* Sections */
+  .diagnosis-section, .medications-section, 
+  .instructions-section, .followup-section {
+    margin-bottom: 30px;
+  }
+  
+  .diagnosis-section h3, .medications-section h3, 
+  .instructions-section h3, .followup-section h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  /* Input Styles */
+  input[type="text"], input[type="date"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .medication-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Medications Table */
+  .medications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .medications-table th {
+    background-color: #131415;
+    padding: 10px;
+    text-align: left;
+    color: #7f8c8d;
+  }
+  
+  .medications-table td {
+    padding: 10px;
+    border-bottom: 1px solid #131415;
+    color: #34495e;
+  }
+  
+  /* Signature Section */
+  .signature-section {
+    margin-top: 50px;
+    text-align: right;
+  }
+  
+  .signature-display p {
+    margin: 5px 0;
+    color: #34495e;
+  }
+  
+  .signature-input {
+    text-align: right;
+  }
+  
+  .signature-input label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .prescription-actions {
+      display: none;
+    }
+    
+    .prescription-container {
+      padding: 0;
+    }
+    
+    .prescription-card {
+      box-shadow: none;
+      padding: 0;
+    }
+  }

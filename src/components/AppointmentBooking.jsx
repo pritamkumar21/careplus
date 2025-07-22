@@ -20,7 +20,13 @@ function AppointmentBooking({ setAppointments }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setAppointments((prev) => [...prev, formData]); // Send to Dashboard
+
+    const appointmentWithPrescription = {
+      ...formData,
+      prescription: "", // 👈 Add empty prescription field
+    };
+
+    setAppointments((prev) => [...prev, appointmentWithPrescription]);
     setSubmitted(true);
   };
 

@@ -50,12 +50,12 @@ function App() {
           }
         />
 
-        {/* ✅ New Route for Prescription */}
+        {/* ✅ Updated Dynamic Prescription Route */}
         <Route
-          path="/prescription"
+          path="/prescription/:id"
           element={
             isLoggedIn ? (
-              <Prescription />
+              <Prescription appointments={appointments} />
             ) : (
               <Navigate to="/login" />
             )
